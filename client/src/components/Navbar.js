@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 
 const Navbar = () => (
-  <StyledDiv>
+  <div>
 
     <Menu secondary>
       <Link to='/'>
@@ -15,13 +15,13 @@ const Navbar = () => (
       </Link>
     </Menu>
 
-  </StyledDiv>
+  </div>
 )
 
-const StyledDiv = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`
+// const StyledDiv = styled.div`
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// `
 
 export default Navbar;

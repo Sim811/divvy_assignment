@@ -9,14 +9,17 @@ class Api::TransactionsController < ApplicationController
     if transaction.save
       render json: transaction
     else
-      render json: { errors: transaction.errors }, status: :unprocessable_entity,
+      render json: { errors: transaction.errors }, status: :unprocessable_entity
     end
   end
 
   def update
     transaction = Transaction.find(params[:id])
-    transaction.update( complete: !transaction.complete)
-    render json: transaction
+    if transaction.update(transaction_params)
+      render json: transaction
+    else
+      render json: transaction.errors
+    end
   end
 
   def destroy
@@ -27,7 +30,7 @@ class Api::TransactionsController < ApplicationController
   private 
 
   def transaction_params
-    params.require(:transaction).permit(:name, :amount, :type)
+    params.require(:transaction).permit(:name, :amount)
   end
 
 end
