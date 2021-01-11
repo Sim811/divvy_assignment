@@ -21,6 +21,7 @@ class Home extends React.Component {
       })
   }
 
+
   // Where we create our transaction
   addTrans = ( name, amount ) => {
     axios.post('/api/transactions', { name, amount })
@@ -32,11 +33,14 @@ class Home extends React.Component {
   }
 
   // Where we update the transaction
-  updateTrans = (id) => {
-    axios.put(`/api/transactions/${id}`)
+  updateTrans = (d) => {
+    // debugger
+    const { name, amount } = d
+    axios.put(`/api/transactions/${d.id}`, {name, amount})
       .then(res => {
+        // debugger
         const transactions = this.state.transactions.map(t => {
-          if (t.id === id)
+          if (t.id === d.id)
             return res.data;
           return t;
         });
@@ -86,6 +90,10 @@ class Home extends React.Component {
 const StyledHeader = styled(Header)`
   border-bottom: 2px solid black !important;
 `
+
+// const StyledDiv = styled.div`
+//   background-color: #f6f4e9;
+// `
 
 
 export default Home;

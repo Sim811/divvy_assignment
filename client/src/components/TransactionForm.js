@@ -14,8 +14,11 @@ class TransactionForm extends React.Component {
     const { name, amount } = this.state;
     e.preventDefault();
     if (this.props.id) {
+      // debugger
+      // console.log( this.props.id,{ ...this.state })
       this.props.updateTrans({ id: this.props.id, ...this.state });
       this.props.toggleEdit();
+      
     } else {
       this.props.addTrans( name, amount );
     }
@@ -60,7 +63,7 @@ const StyledDiv = styled.div`
 
 const StyledButton = styled(Button)`
   border: 2px solid black !important; 
-  border-radius: 0 !important;
+  border-radius: 10px !important;
   background-color: transparent !important;
   color: black !important;
 
@@ -71,7 +74,7 @@ const StyledButton = styled(Button)`
 `
 const StyledFormInput = styled(Form.Input)`
   input {
-    border-radius: 0 !important;
+    border-radius: 10px !important;
   }
 `
 

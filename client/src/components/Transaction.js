@@ -22,20 +22,20 @@ class Transaction extends React.Component {
               <Header as='h3' > ${this.props.amount} </Header>
 
               <div>
-                <Button
+                <StyledIconBut
                   icon
                   size='small'
                   onClick={this.toggleEdit}
                 >
                   <Icon name='pencil' />
-                </Button>
-                <Button
+                </StyledIconBut>
+                <StyledIconBut
                   icon
                   size='small'
                   onClick={() => this.props.deleteTrans(this.props.id)}
                 >
                   <Icon name='trash' />
-                </Button>
+                </StyledIconBut>
               </div>
 
           </StyledDiv>
@@ -49,10 +49,13 @@ class Transaction extends React.Component {
     }
     
     const StyledTrans = styled(Segment)`
-      border-radius: 0px !important ;
-      box-shadow: -6px 8px 0px 0px #000000 !important ;
-      background: #e8eae6 !important ;
+      border-radius: 10px !important ;
+      box-shadow: -4px 4px 0px 0px #000000 !important ;
+      /* background: #e8eae6 !important ; */
       margin: 0 0 20px 0 !important;
+    `
+    const StyledIconBut = styled(Button)`
+      background-color: transparent !important;
     `
     const StyledDiv = styled.div`
       display: flex;

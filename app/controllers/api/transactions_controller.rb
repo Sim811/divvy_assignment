@@ -14,6 +14,7 @@ class Api::TransactionsController < ApplicationController
   end
 
   def update
+    # binding.pry
     transaction = Transaction.find(params[:id])
     if transaction.update(transaction_params)
       render json: transaction
