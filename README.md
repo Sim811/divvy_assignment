@@ -1,24 +1,28 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Hello, 
 
-Things you may want to cover:
+I hope you enjoy it!!
 
-* Ruby version
+Rails backend, React frontend
 
-* System dependencies
+### run 'bundle'
 
-* Configuration
+to add and get everything we need for the rails back side
 
-* Database creation
+### rails s -p 3001
 
-* Database initialization
+this is what you will run to start the backend server 
+  so it is connected to the front side
 
-* How to run the test suite
+### the 'client' folder
 
-* Services (job queues, cache servers, search engines, etc.)
+that is where all the front end and react code will be
 
-* Deployment instructions
+### run 'yarn'
 
-* ...
+to add everything we need for the frontend
+
+### 'yarn start'
+
+will run the frontend server
