@@ -12,7 +12,7 @@ to add and get everything we need for the rails back side
 
 ### rails s -p 3001
 
-this is what you will run to start the backend server 
+this is what will run to start the backend server 
   so it is connected to the front side
 
 ### the 'client' folder
